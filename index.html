@@ -239,7 +239,22 @@ body.night #polaroidSec h3{color:#f0b0e0;}
 .prow{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;}
 .pol{background:white;padding:9px 9px 32px;border-radius:3px;box-shadow:0 5px 18px rgba(0,0,0,.11);transform:rotate(var(--r,0deg));transition:transform .3s,box-shadow .3s;cursor:pointer;width:124px;}
 .pol:hover{transform:rotate(0deg) scale(1.1);box-shadow:0 10px 30px rgba(255,143,171,.4);z-index:10;}
-.polinner{width:106px;height:96px;border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:3rem;}
+.polinner {
+  width: 110px;              /* your polaroid size */
+  height: 150px;
+  padding: 10px;
+  background: white;
+  box-sizing: border-box;    /* 🔥 important fix */
+  overflow: hidden;
+}
+.polinner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
 .pollabel{text-align:center;margin-top:5px;font-family:'Dancing Script',cursive;font-size:.95rem;color:var(--text);}
 
 /* LOVE METER */
@@ -502,17 +517,17 @@ body.night #footer{color:#f9c8e0;}
 
   <!-- HEART CATCH GAME -->
   <div id="gameSec">
-    <h3>🎮 Catch the Hearts!</h3>
-    <p class="gameinfo">Klik op de hartjes voor punten — hoe snel ben jij? 💕</p>
+    <h3>Vang mijn hartjeeeeeeessssss</h3>
+    <p class="gameinfo">Geen hartjes laten vallen he my love</p>
     <div id="gameArea"></div>
     <p id="gameScore">Score: <span id="scoreNum">0</span> 💖 | Best: <span id="bestNum">0</span> 🏆</p>
-    <button id="gameToggle" onclick="toggleGame()">▶ Start Game</button>
+    <button id="gameToggle" onclick="toggleGame()">▶ Start Spieletje</button>
   </div>
 
   <!-- CARD -->
   <div class="card">
-    <h2>Lief Minii Hairtje 🌸</h2>
-    <p>Vandaag is jouw dag, mijn lieve <span class="hl">Nadiya</span>! De dag waarop de wereld een beetje mooier werd, gewoon door jou erin te hebben. 🌍✨</p>
+    <h2>Minii Hairtje 🌸</h2>
+    <p>Vandaag is jouw dag, mijn lieve <span class="hl">Nadiyatje</span>! De dag waarop de wereld mooier werd, gewoon door jou erin te hebben.</p>
     <p>Jij bent mijn <span class="hl">Pingitje</span>, mijn lievste, mijn alles 💕. Ik wil dat je vandaag alleen maar glimlacht, lacht, en voelt hoe speciaal je bent.</p>
     <p>Happy Birthday, mijn liefste 🌸 Moge dit jaar vol zijn van geluk, avontuur, en heel veel knuffels van mij! 🤗💖</p>
   </div>
@@ -533,26 +548,39 @@ body.night #footer{color:#f9c8e0;}
 
   <!-- POLAROIDS -->
   <div id="polaroidSec">
-    <h3>📸 Our Little World 🌈</h3>
-    <div class="prow">
-      <div class="pol" style="--r:-4deg" onclick="clickPol(this)">
-        <div class="polinner" style="background:#ffc8dd">🌸</div>
-        <div class="pollabel">Mijn bloempje</div>
+  <h3>PIKCHASSSSSSs</h3>
+  <div class="prow">
+
+    <div class="pol" style="--r:-4deg" onclick="clickPol(this)">
+      <div class="polinner">
+        <img src="WhatsApp Image 2026-04-01 at 20.00.23 (1).jpeg" alt="Mijn bloempje">
       </div>
-      <div class="pol" style="--r:3deg" onclick="clickPol(this)">
-        <div class="polinner" style="background:#e8c8f0">🦋</div>
-        <div class="pollabel">Zo vrij</div>
-      </div>
-      <div class="pol" style="--r:-2deg" onclick="clickPol(this)">
-        <div class="polinner" style="background:#b5ead7">🌙</div>
-        <div class="pollabel">Mijn sterreke</div>
-      </div>
-      <div class="pol" style="--r:5deg" onclick="clickPol(this)">
-        <div class="polinner" style="background:#ffd6e0">💕</div>
-        <div class="pollabel">Pingitje</div>
-      </div>
+      <div class="pollabel">Mijn beautiful love in beige</div>
     </div>
+
+    <div class="pol" style="--r:3deg" onclick="clickPol(this)">
+      <div class="polinner">
+        <img src="WhatsApp Image 2026-04-01 at 20.00.23.jpeg" alt="Zo vrij">
+      </div>
+      <div class="pollabel">I WANNA CHUUUUU</div>
+    </div>
+
+    <div class="pol" style="--r:-2deg" onclick="clickPol(this)">
+      <div class="polinner">
+        <img src="WhatsApp Image 2026-04-01 at 20.02.27.jpeg" alt="Mijn sterreke">
+      </div>
+      <div class="pollabel">je bent zooooo schattiggigiggig</div>
+    </div>
+
+    <div class="pol" style="--r:5deg" onclick="clickPol(this)">
+      <div class="polinner">
+        <img src="WhatsApp Image 2026-04-01 at 20.02.52.jpeg" alt="Pingitje">
+      </div>
+      <div class="pollabel">Ma Sha Allah!!!!!!!</div>
+    </div>
+
   </div>
+</div>
 
   <!-- LOVE METER -->
   <div id="loveMeterSec">
